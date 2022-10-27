@@ -1,9 +1,11 @@
-.navbar {
-  height: 100px;
+
+.navbar2 {
+  height: 120px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   border-bottom: 1px solid #9b9b9b;
+  
 }
 
 ul {
@@ -15,12 +17,13 @@ ul {
   width: 80%;
   height: 99px;
   background-color: #ffffff;
+  
 }
 
 li a {
   display: block;
-  color: #666;
   text-align: center;
+  color: #666;
   padding: 14px 16px;
   margin: 5px;
   text-decoration: none;
@@ -39,6 +42,7 @@ li a:hover {
   display: flex;
   justify-content: center;
   font-size: small;
+  margin: 0;
 
 }
 

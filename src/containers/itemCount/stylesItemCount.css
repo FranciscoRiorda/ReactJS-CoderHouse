@@ -1,0 +1,11 @@
+.botonCart {
+    display: flex;
+    justify-content: center;
+}
+
+.inputGroup {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+

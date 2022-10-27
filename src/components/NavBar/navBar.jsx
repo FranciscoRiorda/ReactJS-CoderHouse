@@ -8,8 +8,10 @@ import "./stylesNavBar.css";
 const NavBar = () => {
   return (
     <>
+    <div>
       <p className="headerBar">Espacio Cultural y de Entretenimiento</p>
-      <div className="navbar">
+    </div>
+      <div className="navbar2">
       <Logo/>
         <ul>
           <li>
