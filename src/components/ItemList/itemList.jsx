@@ -6,7 +6,7 @@ import Item from "../Item/item";
 const ItemList = ({ events }) => {
   return (
     events.map((event) => {
-    return <Item key={event.id} event={event} />;
+    return <Item key={event.id} event={event} />
 })
 )
 };

@@ -17,7 +17,6 @@ const Item = ({event}) => {
             <Card.Title>{event.evento}</Card.Title>
             <Card.Text>
               <strong>Salón del evento:</strong> {event.salon} <br></br>
-              <strong>Stock de entradas disponible:</strong> {event.stock}
             </Card.Text>
           </Card.Body>
           <ItemCount event={event} />
