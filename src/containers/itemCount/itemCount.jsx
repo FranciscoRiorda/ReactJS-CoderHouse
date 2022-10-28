@@ -7,14 +7,16 @@ import Form from "react-bootstrap/Form";
 
 import "./stylesItemCount.css";
 
-const ItemCount = () => {
-  let [stock, setStock] = useState(10);
+const ItemCount = (event) => {
+  let [stock, setStock] = useState(event.event.stock);
   let [cantidad, setCantidad] = useState(0);
+
 
   const onChangeAgregarCantidad = () => {
     if (stock > 0) {
       setCantidad(cantidad + 1);
       setStock(stock - 1);
+      console.log(stock);
     } else {
       setCantidad(cantidad);
       alert("Ha llegado a la compra máxima disponible");
@@ -25,6 +27,7 @@ const ItemCount = () => {
     if (cantidad > 1) {
       setCantidad(cantidad - 1);
       setStock(stock + 1);
+      console.log(stock)
     } else {
       setCantidad(cantidad);
       setStock(stock);

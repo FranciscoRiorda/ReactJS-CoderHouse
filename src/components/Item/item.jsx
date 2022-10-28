@@ -20,7 +20,7 @@ const Item = ({event}) => {
               <strong>Stock de entradas disponible:</strong> {event.stock}
             </Card.Text>
           </Card.Body>
-          <ItemCount />
+          <ItemCount event={event} />
         </Card>
       </div>
       )
