@@ -47,9 +47,10 @@ const ItemCount = (event) => {
       <div>
         <Card style={{ width: "17.9rem", border: "0px" }}>
           <Card.Body>
-          <div>
-            <strong>Stock de entradas disponible:</strong> {stock}
-          </div><br></br>
+            <div>
+              <strong>Stock de entradas disponible:</strong> {stock}
+            </div>
+            <br></br>
             <div className="inputGroup">
               <InputGroup className="mb-3">
                 <Button
@@ -60,6 +61,7 @@ const ItemCount = (event) => {
                   -
                 </Button>
                 <Form.Control
+                  className="inputCount"
                   size="sm"
                   type="number"
                   onChange={onChangeAgregarCantidad}
