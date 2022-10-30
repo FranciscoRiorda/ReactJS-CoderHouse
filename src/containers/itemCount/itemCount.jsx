@@ -44,7 +44,7 @@ const ItemCount = (event) => {
 
   return (
     <>
-      <div className="eventosCount">
+      <div>
         <Card style={{ width: "17.9rem", border: "0px" }}>
           <Card.Body>
           <div>
