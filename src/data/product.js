@@ -34,6 +34,13 @@ const eventos = [
     img: "../assets/img/maguiOlave.jpg",
     stock: 21
   },
+  {
+    id: 6,
+    evento: "Monada",
+    salon: "Plaza de la Música",
+    img: "../assets/img/monada.jpg",
+    stock: 2500
+  }
 ];
 
 export default eventos;

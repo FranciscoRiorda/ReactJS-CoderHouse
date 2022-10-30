@@ -9,3 +9,8 @@
     width: 100%;
 }
 
+.eventosCount {
+    border: 0;
+    border-color: rgb(190, 189, 189);
+    border-radius: 0%;
+}

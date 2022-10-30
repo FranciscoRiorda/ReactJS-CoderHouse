@@ -28,8 +28,9 @@ const ItemListConainer = ({ greeting }) => {
       <div className="greeting">
         <p>{greeting}</p>
       </div>
-
+      <div className="cardsFlex">
       <ItemList events={events} />
+      </div>
     </>
   );
 };
