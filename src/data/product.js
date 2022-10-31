@@ -40,6 +40,20 @@ const eventos = [
     salon: "Plaza de la Música",
     img: "../assets/img/monada.jpg",
     stock: 2500
+  },
+  {
+    id: 7,
+    evento: "Bresh",
+    salon: "Quality Estadio",
+    img: "../assets/img/bresh.jpg",
+    stock: 3000
+  },
+  {
+    id: 8,
+    evento: "Fer Palacio",
+    salon: "Plaza de la musica",
+    img: "../assets/img/ferpa.jpg",
+    stock: 2500
   }
 ];
 
