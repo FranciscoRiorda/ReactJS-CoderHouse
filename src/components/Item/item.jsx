@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Card } from "react-bootstrap";
-import ItemCount from "../../containers/itemCount/itemCount";
+import ItemCount from "../../containers/ItemCount/ItemCount";
 
 import "./stylesItem.css";
 

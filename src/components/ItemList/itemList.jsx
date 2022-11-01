@@ -1,7 +1,7 @@
 // Se encargará de hacer el map con los eventos
 
 import React from "react";
-import Item from "../Item/item";
+import Item from "../Item/Item";
 
 const ItemList = ({ events }) => {
   return (
