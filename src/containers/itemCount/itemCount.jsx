@@ -78,7 +78,14 @@ const ItemCount = (event) => {
             </div>
 
             <div className="botonCart">
-              <Button onClick={onAdd} variant="outline-dark">
+              <Button className="botonEvento" variant="outline-dark">
+                Detalle del evento
+              </Button>
+              <Button
+                className="botonEvento"
+                onClick={onAdd}
+                variant="outline-dark"
+              >
                 Comprar entrada
               </Button>
             </div>
