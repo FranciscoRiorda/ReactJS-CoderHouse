@@ -1,9 +1,9 @@
 import './App.css';
-import Root from './components/Root/Root';
+import Router from './routes/routes';
 
 function App() {
   return (
-    <Root />
+    <Router />
   );
 }
 

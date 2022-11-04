@@ -2,17 +2,17 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "../components/Root/Root";
 
-import ItemListContainer from "../src/containers/ItemListContainer/ItemListContainer";
+// import ItemListContainer from "../src/containers/ItemListContainer/ItemListContainer";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Root/>,
+        element: <Root />,
         errorElement: <h1>404 Not found</h1>,
         children: [
             {
-                path: "/cartelera",
-                element: <ItemListContainer/>,
+                path: "/",
+                // element: <ItemListContainer/>,
             },
             {
                 path: "/category/:categoryId",
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     },
 ]);
 
-const   Router = () => {
+const Router = () => {
     return <RouterProvider router={router} />
 }
 
