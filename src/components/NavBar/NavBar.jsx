@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import CartWidget from "../CartWidget/CartWidget";
 import Logo from "../Logo/Logo";
@@ -15,16 +16,16 @@ const NavBar = () => {
       <Logo/>
         <ul>
           <li>
-            <a href="#home">Cartelera</a>
+            <Link to="/cartelera">Cartelera</Link>
           </li>
           <li>
-            <a href="#news">Ubicaciones</a>
+            <Link to="/">Ubicaciones</Link>
           </li>
           <li>
-            <a href="#about">Cómo llegar</a>
+            <Link to="/">Cómo llegar</Link>
           </li>
           <li>
-            <a href="#contact">Contactos</a>
+            <Link to="/">Contactos</Link>
           </li>
         </ul>
         <CartWidget />

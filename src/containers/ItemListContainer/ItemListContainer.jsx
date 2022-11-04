@@ -14,7 +14,7 @@ const ItemListConainer = ({ greeting }) => {
         return new Promise((resolve, reject) => {
           setTimeout(() => {
             resolve(eventos);
-          }, 2000);
+          }, 1500);
         });
       };
 

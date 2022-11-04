@@ -10,13 +10,13 @@ const Item = ({ event }) => {
         <div className="cardEventos">
           <Card style={{ width: "18rem" }}>
             <Card.Img
-              style={{ height: "12rem" }}
+              style={{ height: "11rem" }}
               variant="top"
               src={event.img}
             />
             <Card.Body>
               <Card.Title>{event.evento}</Card.Title>
-              <Card.Text>
+              <Card.Text style={{height: "20px"}}>
                 <strong>Salón del evento:</strong> {event.salon} <br></br>
               </Card.Text>
             </Card.Body>
