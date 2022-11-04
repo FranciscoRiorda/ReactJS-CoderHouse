@@ -9,23 +9,28 @@ import "./stylesNavBar.css";
 const NavBar = () => {
   return (
     <>
-    <div>
-      <p className="headerBar">Espacio Cultural y de Entretenimiento</p>
-    </div>
+      <div>
+        <p className="headerBar">Espacio Cultural y de Entretenimiento</p>
+      </div>
       <div className="navbar2">
-      <Logo/>
+        <Link to="/home">
+          <Logo />
+        </Link>
         <ul>
+          <li>
+            <Link to="/home">Inicio</Link>
+          </li>
           <li>
             <Link to="/cartelera">Cartelera</Link>
           </li>
           <li>
-            <Link to="/">Ubicaciones</Link>
+            <Link to="/artistas">Artistas</Link>
           </li>
           <li>
-            <Link to="/">Cómo llegar</Link>
+            <Link to="/salones">Salones</Link>
           </li>
           <li>
-            <Link to="/">Contactos</Link>
+            <Link to="/contacto">Contactos</Link>
           </li>
         </ul>
         <CartWidget />

@@ -4,7 +4,7 @@ import './stylesLogo.css';
 const Logo = () => {
     return(
         <>
-        <div >
+        <div>
             <img className="logo" src="../assets/img/logoSinFondo.png" alt="logo" />
         </div>
         </>
