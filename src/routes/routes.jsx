@@ -20,23 +20,19 @@ const router = createBrowserRouter([
             },
             {
                 path: "/artistas",
-                element: <ItemListContainer/>,
+                element: <h1>Artistas</h1>,
             },
             {
                 path: "/salones",
-                element: <ItemListContainer/>,
+                element: <h1>Salones</h1>,
             },
             {
                 path: "/contacto",
+                element: <h1>Contacto</h1>,
+            },
+            {
+                path: "detail/:detailId",
                 element: <ItemListContainer/>,
-            },
-            {
-                path: "/category/:categoryId",
-                element: <h1>Categoria</h1>,
-            },
-            {
-                path: "detail/:id",
-                element: <h1>Detalle</h1>,
             },
 
         ],

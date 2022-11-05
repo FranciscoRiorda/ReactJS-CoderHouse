@@ -11,6 +11,7 @@ const ItemCount = (event) => {
   let [stock, setStock] = useState(event.event.stock);
   let [cantidad, setCantidad] = useState(0);
 
+
   const onChangeAgregarCantidad = () => {
     if (stock > 0) {
       setCantidad(cantidad + 1);
