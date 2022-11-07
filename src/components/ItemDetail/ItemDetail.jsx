@@ -29,23 +29,6 @@ const ItemDetail = ({ data }) => {
 
         <Card.Footer className="text-muted">{data.fecha}</Card.Footer>
       </Card>
-
-      {/* <div className="cardEventos">
-          <Card style={{ width: "18rem" }}>
-            <Card.Img
-              style={{ height: "11rem" }}
-              variant="top"
-              src={data.img}
-            />
-            <Card.Body>
-              <Card.Title>{data.evento}</Card.Title>
-              <Card.Text style={{height: "20px"}}>
-                <strong>Salón del evento:</strong> {data.salon} <br></br>
-              </Card.Text>
-            </Card.Body>
-            <ItemCount event={data} />
-          </Card>
-        </div> */}
     </>
   );
 };
