@@ -1,0 +1,28 @@
+.img {
+    display: flex;
+    border-radius: 10px;
+}
+
+.CardBody{
+    display: flex;
+    justify-content: center;
+}
+
+.cardDetail{
+    width: 100%;
+    display: flex;
+}
+
+.title{
+    margin: 25px;
+}
+
+.description{
+    display: block;
+    width: 100%;
+}
+
+.itemCount{
+    display: flex;
+    justify-content: center;
+}

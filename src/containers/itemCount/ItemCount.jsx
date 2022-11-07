@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
@@ -7,10 +8,10 @@ import Form from "react-bootstrap/Form";
 
 import "./stylesItemCount.css";
 
-const ItemCount = (event) => {
-  let [stock, setStock] = useState(event.event.stock);
-  let [cantidad, setCantidad] = useState(0);
+const ItemCount = ({data}) => {
 
+  const [cantidad, setCantidad] = useState(0);
+  const [stock, setStock] = useState(data.stock);
 
   const onChangeAgregarCantidad = () => {
     if (stock > 0) {
@@ -42,11 +43,11 @@ const ItemCount = (event) => {
   };
 
   useEffect(() => {}, [cantidad]);
-
+  
   return (
     <>
       <div>
-        <Card style={{ width: "17.9rem", border: "0px" }}>
+        <Card style={{ width: "28rem", border: "0px" }}>
           <Card.Body>
             <div>
               <strong>Stock de entradas disponible:</strong> {stock}
@@ -79,9 +80,6 @@ const ItemCount = (event) => {
             </div>
 
             <div className="botonCart">
-              <Button className="botonEvento" variant="outline-dark">
-                Detalle del evento
-              </Button>
               <Button
                 className="botonEvento"
                 onClick={onAdd}
