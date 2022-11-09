@@ -8,15 +8,14 @@ import Form from "react-bootstrap/Form";
 
 import "./stylesItemCount.css";
 
-const ItemCount = ({data}) => {
-
-  const [cantidad, setCantidad] = useState(0);
-  const [stock, setStock] = useState(data.stock);
-
+const ItemCount = ({stock, onAdd}) => {
+  
+  const [cantidad, setCantidad] = useState(1);
+  
+  
   const onChangeAgregarCantidad = () => {
-    if (stock > 0) {
+    if (cantidad < stock) {
       setCantidad(cantidad + 1);
-      setStock(stock - 1);
     } else {
       setCantidad(cantidad);
       alert("Ha llegado a la compra máxima disponible");
@@ -26,21 +25,19 @@ const ItemCount = ({data}) => {
   const onChangeDisminuirCantidad = () => {
     if (cantidad > 1) {
       setCantidad(cantidad - 1);
-      setStock(stock + 1);
     } else {
       setCantidad(cantidad);
-      setStock(stock);
       alert("No puede comprar menos de 1 entrada");
     }
   };
 
-  const onAdd = () => {
-    if (cantidad === 0) {
-      alert("Debe comprar por lo menos 1 entrada");
-    } else {
-      alert(`Cantidad de entradas compradas: ${cantidad}`);
-    }
-  };
+  // const onAdd = () => {
+  //   if (cantidad === 0) {
+  //     alert("Debe comprar por lo menos 1 entrada");
+  //   } else {
+  //     alert(`Cantidad de entradas compradas: ${cantidad}`);
+  //   }
+  // };
 
   useEffect(() => {}, [cantidad]);
   
@@ -50,7 +47,7 @@ const ItemCount = ({data}) => {
         <Card style={{ width: "28rem", border: "0px" }}>
           <Card.Body>
             <div>
-              <strong>Stock de entradas disponible:</strong> {stock}
+              <strong>Entradas disponibles:</strong> {stock - cantidad}
             </div>
             <br></br>
             <div className="inputGroup">
@@ -82,7 +79,7 @@ const ItemCount = ({data}) => {
             <div className="botonCart">
               <Button
                 className="botonEvento"
-                onClick={onAdd}
+                onClick={(() => onAdd(cantidad))}
                 variant="outline-dark"
               >
                 Comprar entrada

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { Spinner } from "react-bootstrap";
 import ItemList from "../../components/ItemList/ItemList";
 
 import "./stylesItemListContainer.css";
@@ -11,9 +12,11 @@ const ItemListConainer = ({ greeting }) => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch(`data/product.json`);
-        const data = await response.json();
-        setEvents(data);
+        setTimeout(async() => {
+          const response = await fetch(`data/product.json`);
+          const data = await response.json();
+          setEvents(data);
+        }, 300);
         
       } catch (error) {
         console.log(error);        
@@ -29,7 +32,7 @@ const ItemListConainer = ({ greeting }) => {
         <p>{greeting}</p>
       </div>
       <div className="cardsFlex">
-      <ItemList events={events} />
+      { events.length ? <ItemList events={events} /> : <Spinner animation="border" variant="danger" />}
       </div>
     </>
   );

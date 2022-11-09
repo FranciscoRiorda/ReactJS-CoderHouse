@@ -1,20 +1,26 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
 
-const ItemDetailContainer = () => {
+import "./stylesItemDetailContainer.css";
 
-  const [data, setData] = useState([])
+const ItemDetailContainer = ({detalle}) => {
+
+  const [data, setData] = useState()
   const {detailId} = useParams();
 
 
   const getOne = async () => {
     try {
 
-      const response = await fetch(`/data/product.json`);
-      const data = await response.json();
-      setData(data[detailId-1]);
+      setTimeout(async() => {
+        const response = await fetch(`/data/product.json`);
+        const data = await response.json();
+        setData(data[detailId-1]);
+        
+      }, 300);
       
     } catch (error) {
       console.log(error);
@@ -26,7 +32,9 @@ const ItemDetailContainer = () => {
   },[detailId])
 
   return (
-      <ItemDetail data={data}/>
+    <div className="cardDetail">
+      {data ? <ItemDetail data={data} /> : <Spinner className='spinner' animation="border" variant="danger" />}
+    </div>
   )
 }
 
