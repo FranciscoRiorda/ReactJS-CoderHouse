@@ -15,6 +15,8 @@ const ItemDetail = ({ data, detalle }) => {
     setCantdadEntradas(cantidadEntradas);
   }
 
+  const entradasCompradas = <p>Cantidad de entradas seleccionadas: {cantidadEntradas}</p>;
+
 
   return (
     <>
@@ -35,8 +37,7 @@ const ItemDetail = ({ data, detalle }) => {
               <Card.Title className="title">Lugar: {data.salon}</Card.Title>
               <Card.Text>Capacidad de salón: {data.stock}</Card.Text>
               <div className="itemCount">
-                {cantidadEntradas ? <div><Link to="/cart"> <Button variant="outline-dark"> Ir al carrito</Button> </Link> <p>Cantidad de entradas seleccionadas: {cantidadEntradas}</p></div> : <ItemCount stock={data.stock} onAdd={confirmarCompra} />}
-                
+                {cantidadEntradas ? <div><Link to="/cart"> <Button variant="outline-dark"> Ir al carrito</Button> </Link> {entradasCompradas}</div> : <ItemCount stock={data.stock} onAdd={confirmarCompra} />}
               </div>
             </div>
           </Card.Body>
