@@ -15,7 +15,7 @@ const ItemDetail = ({ data, detalle }) => {
     setCantdadEntradas(cantidadEntradas);
   }
 
-  const entradasCompradas = <p>Cantidad de entradas seleccionadas: {cantidadEntradas}</p>;
+  const entradasCompradas = <p style={{margin:"30px"}}>Cantidad de entradas seleccionadas: {cantidadEntradas}</p>;
 
 
   return (
