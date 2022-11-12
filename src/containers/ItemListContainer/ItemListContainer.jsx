@@ -19,9 +19,7 @@ const ItemListConainer = ({ greeting }) => {
           response = await fetch(`/data/product.json`);
           const data = await response.json();
           const data2 = data.filter(d => d.categoria === `${categoryId}`);
-          console.log(data2, "categoryId");
-          setEvents(data2);
-
+          data2.length >= 0 ? setEvents(data2) : setEvents([]);
         }else{
           setTimeout(async () => {
             response = await fetch(`data/product.json`);
@@ -34,6 +32,8 @@ const ItemListConainer = ({ greeting }) => {
       }
     })();
   }, [categoryId]);
+
+  console.log(events)
 
   return (
     <>
@@ -56,7 +56,7 @@ const ItemListConainer = ({ greeting }) => {
           </Link>
         </ButtonGroup>
       </div>
-      
+
       <div className="cardsFlex">
         {events.length ? (
           <ItemList events={events} />

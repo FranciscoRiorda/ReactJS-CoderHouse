@@ -10,36 +10,29 @@ import "./stylesItemCount.css";
 
 const ItemCount = ({stock, onAdd}) => {
   
-  const [cantidad, setCantidad] = useState(1);
+  const [cantidadEntradas, setCantidadEntradas] = useState(1);
   
   
   const onChangeAgregarCantidad = () => {
-    if (cantidad < stock) {
-      setCantidad(cantidad + 1);
+    if (cantidadEntradas < stock) {
+      setCantidadEntradas(cantidadEntradas + 1);
     } else {
-      setCantidad(cantidad);
+      setCantidadEntradas(cantidadEntradas);
       alert("Ha llegado a la compra máxima disponible");
     }
   };
 
   const onChangeDisminuirCantidad = () => {
-    if (cantidad > 1) {
-      setCantidad(cantidad - 1);
+    if (cantidadEntradas > 1) {
+      setCantidadEntradas(cantidadEntradas - 1);
     } else {
-      setCantidad(cantidad);
+      setCantidadEntradas(cantidadEntradas);
       alert("No puede comprar menos de 1 entrada");
     }
   };
 
-  // const onAdd = () => {
-  //   if (cantidad === 0) {
-  //     alert("Debe comprar por lo menos 1 entrada");
-  //   } else {
-  //     alert(`Cantidad de entradas compradas: ${cantidad}`);
-  //   }
-  // };
 
-  useEffect(() => {}, [cantidad]);
+  useEffect(() => {}, [cantidadEntradas]);
   
   return (
     <>
@@ -47,7 +40,7 @@ const ItemCount = ({stock, onAdd}) => {
         <Card style={{ width: "28rem", border: "0px" }}>
           <Card.Body>
             <div>
-              <strong>Entradas disponibles:</strong> {stock - cantidad}
+              <strong>Entradas disponibles:</strong> {stock - cantidadEntradas}
             </div>
             <br></br>
             <div className="inputGroup">
@@ -64,7 +57,7 @@ const ItemCount = ({stock, onAdd}) => {
                   size="sm"
                   type="number"
                   onChange={onChangeAgregarCantidad}
-                  value={cantidad}
+                  value={cantidadEntradas}
                 />
                 <Button
                   onClick={onChangeAgregarCantidad}
@@ -79,7 +72,7 @@ const ItemCount = ({stock, onAdd}) => {
             <div className="botonCart">
               <Button
                 className="botonEvento"
-                onClick={(() => onAdd(cantidad))}
+                onClick={(() => onAdd(cantidadEntradas))}
                 variant="outline-dark"
               >
                 Comprar entrada
