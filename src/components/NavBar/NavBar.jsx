@@ -18,19 +18,27 @@ const NavBar = () => {
         </Link>
         <ul>
           <li>
-            <Link to="/home">Inicio</Link>
+            <Link to="/home" className="dropDown">
+              Inicio
+            </Link>
           </li>
+
           <li>
-            <Link to="/cartelera">Cartelera</Link>
+            <Link to="/cartelera" className="dropDown">
+              Cartelera
+            </Link>
           </li>
+
           <li>
-            <Link to="/artistas">Artistas</Link>
+            <Link to="/salones" className="dropDown">
+              Salones
+            </Link>
           </li>
+
           <li>
-            <Link to="/salones">Salones</Link>
-          </li>
-          <li>
-            <Link to="/contacto">Contactos</Link>
+            <Link to="/contacto" className="dropDown">
+              Contactos
+            </Link>
           </li>
         </ul>
         <CartWidget />

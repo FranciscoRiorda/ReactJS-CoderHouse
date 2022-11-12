@@ -15,21 +15,20 @@ const Item = ({ event }) => {
 
 
   return (
-        <div className="cardEventos">
-          <Card style={{ width: "18rem" }}>
+          <Card className="cardEventos" >
+            <p onClick={navigateDetail} className="info">Comprar entradas</p>
             <Card.Img onClick={navigateDetail}
-              style={{ height: "11rem" }}
+              style={{ height: "10rem" }}
               variant="top"
               src={event.img}
-            />
+              />
             <Card.Body>
               <Card.Title>{event.evento}</Card.Title>
-              <Card.Text style={{height: "20px"}}>
-                <strong>Salón del evento:</strong> {event.salon} <br></br>
+              <Card.Text style={{height: "50px"}}>
+                <strong>Salón del evento:</strong> {event.salon}
               </Card.Text>
             </Card.Body>
           </Card>
-        </div>
   );
 };
 

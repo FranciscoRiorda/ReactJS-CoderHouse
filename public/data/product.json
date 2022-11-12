@@ -5,7 +5,8 @@
     "salon": "La Plaza de la Música",
     "img": "../assets/img/laKonga.jpg",
     "stock": 10,
-    "fecha": "14 de Noviembre 2022"
+    "fecha": "14 de Noviembre 2022",
+    "categoria": "cuarteto"
   },
   { 
     "id": 2,
@@ -13,7 +14,8 @@
     "salon": "Sala del Rey",
     "img": "../assets/img/qLokura.jpg",
     "stock": 8,
-    "fecha": "14 de Noviembre 2022"
+    "fecha": "14 de Noviembre 2022",
+    "categoria": "cuarteto"
   },
   { 
     "id": 3,
@@ -21,7 +23,8 @@
     "salon": "Estadio del Centro",
     "img": "../assets/img/ulisesBueno.jpg",
     "stock": 4,
-    "fecha": "14 de Noviembre 2022"
+    "fecha": "14 de Noviembre 2022",
+    "categoria": "cuarteto"
   },
   { 
     "id": 4,
@@ -29,7 +32,8 @@
     "img": "../assets/img/monaJimenez.jpg",
     "salon": "Atenas",
     "stock": 15,
-    "fecha": "14 de Noviembre 2022"
+    "fecha": "14 de Noviembre 2022",
+    "categoria": "cuarteto"
   },
   { 
     "id": 5,
@@ -37,7 +41,8 @@
     "salon": "Sargento Cabral",
     "img": "../assets/img/maguiOlave.jpg",
     "stock": 21,
-    "fecha": "14 de Noviembre 2022"
+    "fecha": "14 de Noviembre 2022",
+    "categoria": "cuarteto"
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "salon": "Plaza de la Música",
     "img": "../assets/img/monada.jpg",
     "stock": 2500,
-    "fecha": "14 de Noviembre 2022"
+    "fecha": "14 de Noviembre 2022",
+    "categoria": "cuarteto"
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "salon": "Quality Estadio",
     "img": "../assets/img/bresh.jpg",
     "stock": 3000,
-    "fecha": "14 de Noviembre 2022"
+    "fecha": "14 de Noviembre 2022",
+    "categoria": "fiesta"
   },
   {
     "id": 8,
@@ -61,7 +68,8 @@
     "salon": "Plaza de la musica",
     "img": "../assets/img/ferpa.jpg",
     "stock": 2500,
-    "fecha": "14 de Noviembre 2022"
+    "fecha": "14 de Noviembre 2022",
+    "categoria": "dj"
   }
 ]
 

@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 1px solid #9b9b9b;
+  border-bottom: 1px solid #9b9b9b64;
   
 }
 
@@ -23,9 +23,8 @@ ul {
 li a {
   display: block;
   text-align: center;
-  color: #666;
-  padding: 14px 16px;
-  margin: 5px;
+  padding: 10px 20px;
+  margin: 15px;
   text-decoration: none;
 }
 
@@ -45,4 +44,10 @@ li a:hover {
   margin: 0;
 
 }
+
+.dropDown{
+  text-decoration: none;
+  color:rgb(0, 0, 0)
+}
+
 

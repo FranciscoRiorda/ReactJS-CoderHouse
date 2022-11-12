@@ -14,3 +14,13 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.buttonGroup{
+    display: flex;
+    justify-content: left;
+    margin: 0% 0% 3% 3%;
+}
+
+.boton{
+    margin: 1px;
+}

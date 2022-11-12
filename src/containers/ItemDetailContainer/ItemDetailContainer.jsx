@@ -14,7 +14,6 @@ const ItemDetailContainer = ({detalle}) => {
 
   const getOne = async () => {
     try {
-
       setTimeout(async() => {
         const response = await fetch(`/data/product.json`);
         const data = await response.json();

@@ -20,8 +20,8 @@ const router = createBrowserRouter([
                 element: <ItemListContainer/>,
             },
             {
-                path: "/artistas",
-                element: <h1>Artistas</h1>,
+                path: "/category/:categoryId",
+                element: <ItemListContainer/>,
             },
             {
                 path: "/salones",
