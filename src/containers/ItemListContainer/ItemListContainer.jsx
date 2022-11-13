@@ -4,6 +4,11 @@ import { Button, ButtonGroup, Spinner } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import ItemList from "../../components/ItemList/ItemList";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-regular-svg-icons";
+
 import "./stylesItemListContainer.css";
 
 const ItemListConainer = ({ greeting }) => {
@@ -15,12 +20,12 @@ const ItemListConainer = ({ greeting }) => {
       try {
         console.log(categoryId);
         let response;
-        if(categoryId){
+        if (categoryId) {
           response = await fetch(`/data/product.json`);
           const data = await response.json();
-          const data2 = data.filter(d => d.categoria === `${categoryId}`);
+          const data2 = data.filter((d) => d.categoria === `${categoryId}`);
           data2.length >= 0 ? setEvents(data2) : setEvents([]);
-        }else{
+        } else {
           setTimeout(async () => {
             response = await fetch(`data/product.json`);
             const data = await response.json();
@@ -33,26 +38,89 @@ const ItemListConainer = ({ greeting }) => {
     })();
   }, [categoryId]);
 
-  console.log(events)
+  console.log(events);
 
   return (
     <>
+      <div className="contentItemCarrusel">
+        <div className="itemCarrusel" id="itemCarrusel-1">
+          <div className="tarjetaCarrusel" id="tarjetaCarrusel-1">
+            img 1
+          </div>
+          <div className="flechasCarrusel">
+            <a href="#itemCarrusel-3">
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </a>
+            <a href="#itemCarrusel-2">
+              <FontAwesomeIcon icon={faChevronRight} />
+            </a>
+          </div>
+        </div>
+
+        <div className="itemCarrusel" id="itemCarrusel-2">
+          <div className="tarjetaCarrusel" id="tarjetaCarrusel-2">
+            img 2
+          </div>
+          <div className="flechasCarrusel">
+            <a href="#itemCarrusel-1">
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </a>
+            <a href="#itemCarrusel-3">
+              <FontAwesomeIcon icon={faChevronRight} />
+            </a>
+          </div>
+        </div>
+
+        <div className="itemCarrusel" id="itemCarrusel-3">
+          <div className="tarjetaCarrusel" id="tarjetaCarrusel-3">
+            img 3
+          </div>
+          <div className="flechasCarrusel">
+            <a href="#itemCarrusel-2">
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </a>
+            <a href="#itemCarrusel-1">
+              <FontAwesomeIcon icon={faChevronRight} />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="contenedorPuntos">
+        <a href="#itemCarrusel-1">
+          <FontAwesomeIcon icon={faCircle} />
+        </a>
+        <a href="#itemCarrusel-2">
+          <FontAwesomeIcon icon={faCircle} />
+        </a>
+        <a href="#itemCarrusel-3">
+          <FontAwesomeIcon icon={faCircle} />
+        </a>
+      </div>
+
       <div className="greeting">
         <p>{greeting}</p>
       </div>
       <div className="buttonGroup">
         <ButtonGroup aria-label="Basic example">
           <Link to="/cartelera">
-            <Button className="boton" variant="dark">Todos</Button>
+            <Button className="boton" variant="dark">
+              Todos
+            </Button>
           </Link>
           <Link to="/category/cuarteto">
-            <Button className="boton" variant="dark">Cuarteto</Button>
+            <Button className="boton" variant="dark">
+              Cuarteto
+            </Button>
           </Link>
           <Link to="/category/fiesta">
-            <Button className="boton" variant="dark">Fiesta</Button>
+            <Button className="boton" variant="dark">
+              Fiesta
+            </Button>
           </Link>
           <Link to="/category/dj">
-            <Button className="boton" variant="dark">DJ</Button>
+            <Button className="boton" variant="dark">
+              DJ
+            </Button>
           </Link>
         </ButtonGroup>
       </div>
