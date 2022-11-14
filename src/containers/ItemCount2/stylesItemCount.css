@@ -1,0 +1,19 @@
+.botonCart {
+    display: flex;
+    justify-content: center;
+}
+
+.inputGroup {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.inputCount{
+    text-align: center;
+}
+
+.botonEvento{
+    width: 100%;
+    margin: 5px;
+}
