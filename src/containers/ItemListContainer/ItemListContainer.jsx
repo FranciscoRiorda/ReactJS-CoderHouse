@@ -4,11 +4,6 @@ import { Button, ButtonGroup, Spinner } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import ItemList from "../../components/ItemList/ItemList";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import { faCircle } from "@fortawesome/free-regular-svg-icons";
-
 import "./stylesItemListContainer.css";
 
 const ItemListConainer = ({ greeting }) => {
@@ -42,61 +37,6 @@ const ItemListConainer = ({ greeting }) => {
 
   return (
     <>
-      <div className="contentItemCarrusel">
-        <div className="itemCarrusel" id="itemCarrusel-1">
-          <div className="tarjetaCarrusel" id="tarjetaCarrusel-1">
-            img 1
-          </div>
-          <div className="flechasCarrusel">
-            <a href="#itemCarrusel-3">
-              <FontAwesomeIcon icon={faChevronLeft} />
-            </a>
-            <a href="#itemCarrusel-2">
-              <FontAwesomeIcon icon={faChevronRight} />
-            </a>
-          </div>
-        </div>
-
-        <div className="itemCarrusel" id="itemCarrusel-2">
-          <div className="tarjetaCarrusel" id="tarjetaCarrusel-2">
-            img 2
-          </div>
-          <div className="flechasCarrusel">
-            <a href="#itemCarrusel-1">
-              <FontAwesomeIcon icon={faChevronLeft} />
-            </a>
-            <a href="#itemCarrusel-3">
-              <FontAwesomeIcon icon={faChevronRight} />
-            </a>
-          </div>
-        </div>
-
-        <div className="itemCarrusel" id="itemCarrusel-3">
-          <div className="tarjetaCarrusel" id="tarjetaCarrusel-3">
-            img 3
-          </div>
-          <div className="flechasCarrusel">
-            <a href="#itemCarrusel-2">
-              <FontAwesomeIcon icon={faChevronLeft} />
-            </a>
-            <a href="#itemCarrusel-1">
-              <FontAwesomeIcon icon={faChevronRight} />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="contenedorPuntos">
-        <a href="#itemCarrusel-1">
-          <FontAwesomeIcon icon={faCircle} />
-        </a>
-        <a href="#itemCarrusel-2">
-          <FontAwesomeIcon icon={faCircle} />
-        </a>
-        <a href="#itemCarrusel-3">
-          <FontAwesomeIcon icon={faCircle} />
-        </a>
-      </div>
-
       <div className="greeting">
         <p>{greeting}</p>
       </div>

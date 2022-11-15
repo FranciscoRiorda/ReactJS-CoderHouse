@@ -1,9 +1,17 @@
-import './App.css';
-import Router from './routes/routes';
+import "./App.css";
+import Router from "./routes/routes";
+import { useContext } from "react";
+import { Theme } from "./contexts/Theme";
 
 function App() {
+  const { themeColor } = useContext(Theme);
+
   return (
-    <Router />
+    <>
+      <div className={themeColor === "dark" ? "backgroundDark" : null}>
+        <Router />
+      </div>
+    </>
   );
 }
 

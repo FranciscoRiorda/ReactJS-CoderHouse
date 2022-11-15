@@ -12,7 +12,7 @@
     align-items: center;
     font-size: large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+
 }
 
 .cardsFlex {
@@ -32,6 +32,58 @@
 }
 
 /* Carrousell */
+
+.carrousel{
+    width: 100%;
+    max-width: 120em;
+    padding: 1em;
+    /* background-color: aqua; */
+    overflow: hidden;
+}
+
+.contenedorPrincipal{
+    width: 300%;
+    background-color: orange;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1.2em; */
+    position: relative;
+    box-shadow: 1px 6px 10px;
+
+    transition: all 1s ease;
+    transform: translateX(-0.33%);
+}
+
+.img{
+    width: calc(100% / 2 - 2em);
+    height: 300px;
+    background-color: green;
+}
+
+.puntos{
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(240, 248, 255, 0);
+    top: 426px;
+}
+
+.punto{
+    width: 1.5em;
+    margin: 1em 1em 0;
+}
+
+.activo{
+    color: rgb(142, 142, 142);
+}
+
+/* Carrousel viejo */
 
 .contentItemCarrusel{
     height: 200px;

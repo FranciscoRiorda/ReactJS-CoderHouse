@@ -1,11 +1,12 @@
-.img {
-    /* display: flex; */
-    /* border-radius: 10px; */
-}
 
 .CardBody{
     display: flex;
     justify-content: center;
+}
+
+.cardTitle{
+    background-color: rgb(136, 136, 136);
+    color: white;
 }
 
 .cardDetail{
@@ -13,9 +14,6 @@
     display: flex;
 }
 
-.title{
-    margin: 25px;
-}
 
 .description{
     display: block;
@@ -38,4 +36,8 @@
     height: 3vh;
     display: flex;
     justify-content: center;
+}
+
+.divCardBody{
+    background-color: rgb(145, 145, 145);
 }
