@@ -1,0 +1,7 @@
+.title{
+    box-sizing: x-large;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px 15px;
+}
+

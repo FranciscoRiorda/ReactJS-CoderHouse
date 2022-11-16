@@ -6,7 +6,8 @@
     "img": "../assets/img/laKonga.jpg",
     "stock": 10,
     "fecha": "14 de Noviembre 2022",
-    "categoria": "cuarteto"
+    "categoria": "cuarteto",
+    "precio": 1200
   },
   { 
     "id": 2,
@@ -15,7 +16,8 @@
     "img": "../assets/img/qLokura.jpg",
     "stock": 8,
     "fecha": "14 de Noviembre 2022",
-    "categoria": "cuarteto"
+    "categoria": "cuarteto",
+    "precio": 1200
   },
   { 
     "id": 3,
@@ -24,7 +26,8 @@
     "img": "../assets/img/ulisesBueno.jpg",
     "stock": 4,
     "fecha": "14 de Noviembre 2022",
-    "categoria": "cuarteto"
+    "categoria": "cuarteto",
+    "precio": 1200
   },
   { 
     "id": 4,
@@ -33,7 +36,8 @@
     "salon": "Atenas",
     "stock": 15,
     "fecha": "14 de Noviembre 2022",
-    "categoria": "cuarteto"
+    "categoria": "cuarteto",
+    "precio": 1200
   },
   { 
     "id": 5,
@@ -42,7 +46,8 @@
     "img": "../assets/img/maguiOlave.jpg",
     "stock": 21,
     "fecha": "14 de Noviembre 2022",
-    "categoria": "cuarteto"
+    "categoria": "cuarteto",
+    "precio": 1200
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "img": "../assets/img/monada.jpg",
     "stock": 2500,
     "fecha": "14 de Noviembre 2022",
-    "categoria": "cuarteto"
+    "categoria": "cuarteto",
+    "precio": 1200
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "img": "../assets/img/bresh.jpg",
     "stock": 3000,
     "fecha": "14 de Noviembre 2022",
-    "categoria": "fiesta"
+    "categoria": "fiesta",
+    "precio": 1800
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "img": "../assets/img/ferpa.jpg",
     "stock": 2500,
     "fecha": "14 de Noviembre 2022",
-    "categoria": "dj"
+    "categoria": "dj",
+    "precio": 2000
   }
 ]
 

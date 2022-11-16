@@ -6,7 +6,7 @@ import ItemDetail from '../../components/ItemDetail/ItemDetail';
 
 import "./stylesItemDetailContainer.css";
 
-const ItemDetailContainer = ({detalle}) => {
+const ItemDetailContainer = () => {
 
   const [data, setData] = useState()
   const {detailId} = useParams();
@@ -32,7 +32,7 @@ const ItemDetailContainer = ({detalle}) => {
 
   return (
     <div className="cardDetail">
-      {data ? <ItemDetail data={data} /> : <Spinner className='spinner' animation="border" variant="danger" />}
+      {data ? <ItemDetail data={data} detalle={'Compra de entradas'} /> : <Spinner className='spinner' animation="border" variant="danger" />}
     </div>
   )
 }

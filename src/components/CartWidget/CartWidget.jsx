@@ -7,8 +7,8 @@ const CartWidget = ({theme}) => {
   
   return (
     <>
-      <div  className={theme} >
-      <FontAwesomeIcon icon={faCartShopping} />
+      <div className={theme}>
+      <FontAwesomeIcon icon={faCartShopping} style={{cursor: "pointer"}} />
       </div>
     </>
   );

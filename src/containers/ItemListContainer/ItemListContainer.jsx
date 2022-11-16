@@ -6,7 +6,7 @@ import ItemList from "../../components/ItemList/ItemList";
 
 import "./stylesItemListContainer.css";
 
-const ItemListConainer = ({ greeting }) => {
+const ItemListConainer = () => {
   const [events, setEvents] = useState([]);
   const { categoryId } = useParams();
 
@@ -37,8 +37,8 @@ const ItemListConainer = ({ greeting }) => {
 
   return (
     <>
-      <div className="greeting">
-        <p>{greeting}</p>
+      <div className="title">
+        <b>Centro Cultural Córdoba</b>
       </div>
       <div className="buttonGroup">
         <ButtonGroup aria-label="Basic example">

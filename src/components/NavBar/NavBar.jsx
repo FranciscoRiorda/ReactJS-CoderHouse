@@ -20,7 +20,7 @@ const NavBar = () => {
       <div>
         <p className="headerBar">Espacio Cultural y de Entretenimiento</p>
       </div>
-      <ul className={themeColor === "light" ? "ulLight" : "ulDark"}>
+      <ul className={themeColor === "dark" ? "ulDark" : 'ul'}>
         <div className="imgLogo">
           <Link to="/home">
             <Logo />

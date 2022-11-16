@@ -4,6 +4,7 @@ import Root from "../components/Root/Root";
 
 import ItemDetailContainer from "../containers/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "../containers/ItemListContainer/ItemListContainer";
+import CartContainer from "../containers/CartContainer/CartContainer";
 
 const router = createBrowserRouter([
     {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/cart",
-                element: <h1>Componente Cart</h1>,
+                element: <CartContainer />,
             },
 
         ],
