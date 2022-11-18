@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import InputGroup from "react-bootstrap/InputGroup";
-import Form from "react-bootstrap/Form";
+// import Card from "react-bootstrap/Card";
+// import Button from "react-bootstrap/Button";
+// import InputGroup from "react-bootstrap/InputGroup";
+// import Form from "react-bootstrap/Form";
 
 import "./stylesItemCount.css";
 
 const ItemCount = ({stock, onAdd}) => {
   
   const [cantidadEntradas, setCantidadEntradas] = useState(1);
-  
-  
+
   const onChangeAgregarCantidad = () => {
     if (cantidadEntradas < stock) {
+      console.log(cantidadEntradas)
       setCantidadEntradas(cantidadEntradas + 1);
     } else {
       setCantidadEntradas(cantidadEntradas);
@@ -24,6 +24,7 @@ const ItemCount = ({stock, onAdd}) => {
 
   const onChangeDisminuirCantidad = () => {
     if (cantidadEntradas > 1) {
+      console.log(cantidadEntradas)
       setCantidadEntradas(cantidadEntradas - 1);
     } else {
       setCantidadEntradas(cantidadEntradas);
@@ -36,7 +37,13 @@ const ItemCount = ({stock, onAdd}) => {
   
   return (
     <>
-      <div>
+
+    <div>
+      <button className="boton" onClick={onChangeDisminuirCantidad}>-</button>
+      <span className="span">{cantidadEntradas}</span>
+      <button className="boton" onClick={onChangeAgregarCantidad}>+</button>
+    </div>
+      {/* <div>
         <Card style={{ width: "28rem", border: "0px" }}>
           <Card.Body>
             <div>
@@ -80,7 +87,7 @@ const ItemCount = ({stock, onAdd}) => {
             </div>
           </Card.Body>
         </Card>
-      </div>
+      </div> */}
     </>
   );
 };
