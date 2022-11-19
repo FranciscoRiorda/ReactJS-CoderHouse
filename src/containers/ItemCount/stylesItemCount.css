@@ -3,30 +3,51 @@
     justify-content: center;
 }
 
-.inputGroup {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.inputCount{
-    text-align: center;
-}
-
 .botonEvento{
     width: 100%;
-    margin: 5px;
+    margin: 15px;
+    padding: 15px 22px;
+    border-radius: 10px;
+    background-color: #1d3557;
+    border: 0px;
+    color: white;
+    box-shadow: 1px 1px 5px;
+
+}
+
+.botonEvento:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: 0px 1px 5px;
+
 }
 
 .boton{
     background-color: rgb(234, 234, 234);
-    box-shadow: 1px 1px 5px;
-    padding: 3px 10px;
+    box-shadow: 0px 1px 3px;
+    padding: 2px 10px;
     border: 0;
 }
 
+.boton:hover{
+    background-color: rgb(40, 33, 86);
+    color: white;
+}
+
 .span{
-    border: 1px solid rgb(93, 93, 93);
-    margin: 0px;
-    padding: 5px 40px;
+    border: 1px solid rgb(190, 190, 190);
+    margin: 8px;
+    padding: 3px 40px;
+    box-shadow: 0px 1px 3px;
+}
+
+.entradasDisp{
+    margin: 15px;
+}
+
+.contenedorCount{
+    box-shadow: 0px 1px 5px;
+    border-radius: 15px;
+    padding: 15px;
 }

@@ -7,8 +7,6 @@ import '../CartContainer/stylesCartContainer.css'
 const CartContainer = () => {
   const { products } = useContext(Shop);
 
-  console.log(products);
-
   return (
     <>
       <b className="title">Carrito</b>
