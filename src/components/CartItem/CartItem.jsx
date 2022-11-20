@@ -7,12 +7,15 @@ import { useContext } from "react";
 import { Shop } from "../../contexts/Shop";
 
 const CartItem = ({ item }) => {
-
   const [cantidadEntradas, setCantidadEntradas] = useState(
     item.cantidadEntradas
   );
 
-  const {removeProduct} = useContext(Shop);
+  const { removeProduct } = useContext(Shop);
+
+  const onRemove = () => {
+    removeProduct(item.id);
+  };
 
   const onChangeAgregarCantidad = () => {
     if (item.cantidadEntradas < item.stock) {
@@ -62,8 +65,8 @@ const CartItem = ({ item }) => {
             </div>
           </div>
         </div>
-        <div className="remove">
-          <FontAwesomeIcon onClick={removeProduct()} icon={faTrash} />
+        <div className="remove" onClick={onRemove}>
+          <FontAwesomeIcon icon={faTrash} />
         </div>
       </div>
     </>

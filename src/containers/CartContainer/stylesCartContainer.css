@@ -5,3 +5,41 @@
     margin: 0px 15px;
 }
 
+.spanNotFound{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    
+}
+
+.buttonB{
+    padding: 10px;
+    margin: 25px;
+    color: white;
+    background-color: rgb(1, 81, 255);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 1px 5px;
+}
+
+.buttonB:hover{
+    color: black;
+    background-color: rgb(254, 254, 254);
+    border: 1px solid gray;
+}
+
+.botonVaciar{
+    margin-bottom: 50px;
+}
+
+.buttonDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.notFound{
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
