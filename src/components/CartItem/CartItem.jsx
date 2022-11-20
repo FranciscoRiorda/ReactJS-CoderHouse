@@ -3,11 +3,16 @@ import React, { useEffect, useState } from "react";
 
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import "../CartItem/stylesCartItem.css";
+import { useContext } from "react";
+import { Shop } from "../../contexts/Shop";
 
 const CartItem = ({ item }) => {
+
   const [cantidadEntradas, setCantidadEntradas] = useState(
     item.cantidadEntradas
   );
+
+  const {removeProduct} = useContext(Shop);
 
   const onChangeAgregarCantidad = () => {
     if (item.cantidadEntradas < item.stock) {
@@ -58,7 +63,7 @@ const CartItem = ({ item }) => {
           </div>
         </div>
         <div className="remove">
-          <FontAwesomeIcon icon={faTrash} />
+          <FontAwesomeIcon onClick={removeProduct()} icon={faTrash} />
         </div>
       </div>
     </>
