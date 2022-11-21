@@ -41,34 +41,34 @@ const CartItem = ({ item }) => {
 
   return (
     <>
-      <div className="contenedorPrincipal">
-        <div className="contenedorItem">
-          <img src={item.img} alt="img del evento"></img>
-          <div className="description">
-            <p className="nombreEvento">
-              <strong>{item.evento}</strong>
-            </p>
-            <p>
-              Valor por entrada: <strong>${item.precio}</strong>{" "}
-            </p>
-            <p>
-              Total: <strong>${item.precio * item.cantidadEntradas}</strong>
-            </p>
-            <div className="count">
-              <button className="boton" onClick={onChangeDisminuirCantidad}>
-                -
-              </button>
-              <span className="span">{item.cantidadEntradas}</span>
-              <button className="boton" onClick={onChangeAgregarCantidad}>
-                +
-              </button>
+        <div className="contenedorPrincipal">
+          <div className="contenedorItem">
+            <img src={item.img} alt="img del evento"></img>
+            <div className="description">
+              <p className="nombreEvento">
+                <strong>{item.evento}</strong>
+              </p>
+              <p>
+                Valor por entrada: <strong>${item.precio}</strong>{" "}
+              </p>
+              <p>
+                Total: <strong>${item.precio * item.cantidadEntradas}</strong>
+              </p>
+              <div className="count">
+                <button className="boton" onClick={onChangeDisminuirCantidad}>
+                  -
+                </button>
+                <span className="span">{item.cantidadEntradas}</span>
+                <button className="boton" onClick={onChangeAgregarCantidad}>
+                  +
+                </button>
+              </div>
             </div>
           </div>
+          <div className="remove" onClick={onRemove}>
+            <FontAwesomeIcon icon={faTrash} />
+          </div>
         </div>
-        <div className="remove" onClick={onRemove}>
-          <FontAwesomeIcon icon={faTrash} />
-        </div>
-      </div>
     </>
   );
 };

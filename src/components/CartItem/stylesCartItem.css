@@ -1,7 +1,7 @@
 .contenedorPrincipal{
     display: flex;
     justify-content: flex-start;
-    width: 55%;
+    width: 100%;
     margin: 20px 20px;
     box-shadow: 0px 2px 5px;
 }
@@ -51,23 +51,3 @@ img{
     border-radius: 5px;
 }
 
-.botonEmpty{
-    border-radius: 10px;
-    background-color: rgb(74, 74, 253);
-    color: white;
-    padding: 5px 10px 5px 10px;
-    border: none;
-    font-size: large;
-}
-
-.botonEmpty:hover{
-    background-color: white;
-    color: black;
-    box-shadow: 0px 1px 5px;
-}
-
-.botonVaciar{
-    display: flex;
-    justify-content: flex-end;
-    margin: 0px 50px 0px 0px;
-}

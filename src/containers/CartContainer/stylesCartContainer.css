@@ -1,18 +1,18 @@
-.title{
+.title {
     box-sizing: x-large;
     display: flex;
     justify-content: flex-start;
     margin: 0px 15px;
 }
 
-.spanNotFound{
+.spanNotFound {
     display: flex;
     justify-content: center;
     font-size: xx-large;
-    
+
 }
 
-.buttonB{
+.buttonB {
     padding: 10px;
     margin: 25px;
     color: white;
@@ -22,24 +22,74 @@
     box-shadow: 0px 1px 5px;
 }
 
-.buttonB:hover{
+.buttonB:hover {
     color: black;
     background-color: rgb(254, 254, 254);
     border: 1px solid gray;
 }
 
-.botonVaciar{
+.botonVaciar {
     margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 50px 0px 0px;
 }
 
-.buttonDiv{
+.botonEmpty {
+    border-radius: 10px;
+    background-color: rgb(74, 74, 253);
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    font-size: large;
+}
+
+.botonEmpty:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 1px 5px;
+}
+
+.buttonDiv {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.notFound{
+.notFound {
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
+}
+
+.contenedorShop{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.contenedor {
+    width: 30%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0px 1px 5px;
+}
+
+.shopCard{
+    width: 60%;
+    margin-right: 55px;
+}
+
+.checkout{
+    font-size: x-large;
+    margin: 15px;
+}
+
+.totalCheckout{
+    margin: 55px 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: x-large;
 }

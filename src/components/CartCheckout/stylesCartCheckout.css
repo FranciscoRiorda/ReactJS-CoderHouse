@@ -1,0 +1,12 @@
+.itemCheckout{
+    margin: 10px 10px 0px 10px;
+}
+
+.bCheckout{
+    margin: 5px;
+}
+
+.divCheckout{
+    display: flex;
+    justify-content: space-between;
+}
