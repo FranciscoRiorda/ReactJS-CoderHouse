@@ -5,6 +5,12 @@ import { useNavigate } from "react-router-dom";
 
 import "./stylesItem.css";
 
+/**
+ * Card que muestra el producto
+ * @property {Object} product recibe el prod para renderizar 
+ * @returns JSX con el renderizado del prod
+ */
+
 const Item = ({ event }) => {
 
   const navigate = useNavigate();

@@ -6,6 +6,12 @@ import "../CartItem/stylesCartItem.css";
 import { useContext } from "react";
 import { Shop } from "../../contexts/Shop";
 
+/**
+ * Card con item de producto del carrito
+ * @param {Object} item Recibe item para renderizar prod en carrito
+ * @returns JSX con producto agregado al carrito
+ */
+
 const CartItem = ({ item }) => {
   const [cantidadEntradas, setCantidadEntradas] = useState(
     item.cantidadEntradas
@@ -43,7 +49,7 @@ const CartItem = ({ item }) => {
     <>
         <div className="contenedorPrincipal">
           <div className="contenedorItem">
-            <img src={item.img} alt="img del evento"></img>
+            <img className="imgCI" src={item.img} alt="img del evento"></img>
             <div className="description">
               <p className="nombreEvento">
                 <strong>{item.evento}</strong>
@@ -55,11 +61,11 @@ const CartItem = ({ item }) => {
                 Total: <strong>${item.precio * item.cantidadEntradas}</strong>
               </p>
               <div className="count">
-                <button className="boton" onClick={onChangeDisminuirCantidad}>
+                <button className="botonIC" onClick={onChangeDisminuirCantidad}>
                   -
                 </button>
                 <span className="span">{item.cantidadEntradas}</span>
-                <button className="boton" onClick={onChangeAgregarCantidad}>
+                <button className="botonIC" onClick={onChangeAgregarCantidad}>
                   +
                 </button>
               </div>

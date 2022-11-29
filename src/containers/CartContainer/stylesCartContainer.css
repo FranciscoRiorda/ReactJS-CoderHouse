@@ -93,3 +93,42 @@
     justify-content: space-between;
     font-size: x-large;
 }
+
+.confirmarCompra{
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(74, 74, 253);
+    color: white;
+    padding: 5px 8px 5px 8px;
+    border-radius: 10px;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 1px 5px;
+}
+
+.confirmarCompra:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0px 1px 5px;
+}
+
+.confirmarCompraDeshabilitado{
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(203, 203, 203);
+    color: white;
+    padding: 5px 8px 5px 8px;
+    border-radius: 10px;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 1px 5px;
+}
+
+.inputForm{
+    margin: 20px;
+}
+
+.modal{
+}

@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ThemeProvider>
     <ShopProvider>
-    <App />
+      <App />
     </ShopProvider>
   </ThemeProvider>
 );

@@ -1,28 +1,7 @@
-
-.CardBody{
-    display: flex;
-    justify-content: center;
-}
-
-.cardTitle{
-    background-color: rgb(136, 136, 136);
-    color: white;
-}
-
-.cardDetail{
-    width: 100%;
-    display: flex;
-}
-
-
-.description{
-    display: block;
-    width: 100%;
-}
-
 .itemCount{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .itemDetail{
@@ -42,4 +21,54 @@
 
 .divCardBody{
     background-color: rgb(145, 145, 145);
+}
+
+.dataEvento{
+    border: 1px solid rgb(203, 203, 203);
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    padding: 10px 10px;
+}
+
+.fecha{
+    font-size: medium;
+}
+
+.imgID{
+    height: 300px;
+    width: 400px;
+}
+
+.contenedorPrincipalID{
+    width: 100%;
+    border: 1px solid gray;
+    
+}
+
+.descriptionID{
+    display: flex;
+}
+
+.descripcionID2{
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    font-size: large;
+    width: 40%;
+}
+
+.entradasCompradas{
+    display: flex;
+}
+.botonCart{
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    align-self: center;
+}
+
+.goToCart{
+    margin: 80px 50px;
 }
