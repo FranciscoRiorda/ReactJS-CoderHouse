@@ -127,8 +127,10 @@
 }
 
 .inputForm{
-    margin: 20px;
+    margin: 5px;
 }
 
-.modal{
+.validCorreo{
+    color: red;
+    font-size:x-small;
 }

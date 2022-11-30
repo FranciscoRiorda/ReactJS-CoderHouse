@@ -6,7 +6,7 @@ import { Shop } from "../../contexts/Shop";
 import "../CartContainer/stylesCartContainer.css";
 import CartCheckout from "../../components/CartCheckout/CartCheckout";
 import { useState } from "react";
-import { Button, Col, Form, InputGroup, Modal, Row } from "react-bootstrap";
+import { Button, Col, Form, InputGroup, Modal, Row, Spinner } from "react-bootstrap";
 import generateOrderObject from "../../services/generateOrderObject";
 import { doc, getDoc, updateDoc, collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/config";
@@ -18,7 +18,7 @@ const MySwal = withReactContent(Swal);
 
 /**
  * Sección de carrito con los productos a comprar
- * @property {Object} product recube products, emptyCart y calcularTotal para checkouy y modal 
+ * @property {Object} product recube products, emptyCart y calcularTotal para checkouy y modal
  * @returns JSX con el renderizado del prod en carrito y modal
  */
 
@@ -39,24 +39,30 @@ const CartContainer = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [validated, setValidated] = useState(false);
 
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [correo, setCorreo] = useState("");
+  const [dni, setDni] = useState("");
+  const [validCorreo, setValidCorreo] = useState("");
   const [telefono, setTelefono] = useState("");
   ///
 
-  const handleChange = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    setValidated(true);
 
-    event.preventDefault();
-    handleClose();
+  const handleChange = (event) => {
+    if (
+      correo === validCorreo &&
+      nombre.length >= 3 &&
+      apellido.length >= 3 &&
+      telefono.length >= 10 &&
+      correo !== ""
+    ) {
+      event.preventDefault();
+      confirmPurchase();
+      handleClose();
+    } else {
+      event.preventDefault();
+    }
   };
 
   // Mostrar orden de compra con datos del comprador
@@ -67,11 +73,11 @@ const CartContainer = () => {
         apellido,
         telefono,
         correo,
+        dni,
         products,
         calcularTotal()
       );
 
-      try {
       // Chequear stock de prod en carrito
       let productOutStock = [];
 
@@ -99,30 +105,29 @@ const CartContainer = () => {
         }
 
         // Generar la orden de compra
-        
+        try {
           const docRef = await addDoc(collection(db, "orders"), generateOrder);
+          
           MySwal.fire({
             title: <p>Orden de compra</p>,
             text: `Orden de compra enviada correctamente, con id: ${docRef.id}`,
             icon: "success",
             confirmButtonText: "Aceptar",
-
           }).then(() => {
             onEmpty();
             return MySwal.fire(<p>Gracias por su compra!</p>);
           });
-        
+        } catch (error) {
+          console.log(error);
+        }
       } else {
         MySwal.fire({
           title: <p>Compra no procesada</p>,
           text: `Sin stock en alguno de los productos seleccionados`,
-          icon: 'error',
-          confirmButtonText: 'Aceptar'
-        })
+          icon: "error",
+          confirmButtonText: "Aceptar",
+        });
       }
-    } catch (error) {
-      console.log(error);
-    }
     })();
   };
 
@@ -160,11 +165,16 @@ const CartContainer = () => {
             <b>${calcularTotal()}</b>
           </div>
           <div>
-            {products.length === 0 ? <div className="confirmarCompraDeshabilitado">Confirmar Compra</div> : <div className="confirmarCompra" onClick={handleShow}>
-            <b>Confirmar Compra</b>
-          </div>}
+            {products.length === 0 ? (
+              <div className="confirmarCompraDeshabilitado">
+                Confirmar Compra
+              </div>
+            ) : (
+              <div className="confirmarCompra" onClick={handleShow}>
+                <b>Confirmar Compra</b>
+              </div>
+            )}
           </div>
-          
         </div>
       </div>
 
@@ -173,7 +183,7 @@ const CartContainer = () => {
           <Modal.Title>Datos del comprador</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form noValidate validated={validated} onSubmit={handleChange}>
+          <Form noValidate onSubmit={handleChange}>
             <Row className="mb-3">
               <Form.Group
                 className="inputForm"
@@ -189,10 +199,11 @@ const CartContainer = () => {
                   value={nombre}
                   onChange={(ev) => setNombre(ev.target.value)}
                 />
-                <Form.Control.Feedback>Correcto!</Form.Control.Feedback>
-                <Form.Control.Feedback type="invalid">
-                  Ingresar un correo.
-                </Form.Control.Feedback>
+                {nombre.length < 3 ? (
+                  <p className="validCorreo">
+                    El nombre es necesario, con mínimo de 3 dígitos.
+                  </p>
+                ) : null}
               </Form.Group>
               <Form.Group
                 className="inputForm"
@@ -208,11 +219,29 @@ const CartContainer = () => {
                   value={apellido}
                   onChange={(ev) => setApellido(ev.target.value)}
                 />
-                <Form.Control.Feedback>Correcto!</Form.Control.Feedback>
-                <Form.Control.Feedback type="invalid">
-                  Ingresar un correo.
-                </Form.Control.Feedback>
+                {apellido.length < 3 ? (
+                  <p className="validCorreo">
+                    El apellido es necesario, con mínimo de 3 dígitos.
+                  </p>
+                ) : null}
               </Form.Group>
+
+              <Form.Group
+                className="inputForm"
+                as={Col}
+                md="5"
+                controlId="validationCustom02"
+              >
+                <Form.Label>DNI</Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  placeholder="DNI"
+                  value={dni}
+                  onChange={(ev) => setDni(ev.target.value)}
+                />
+              </Form.Group>
+
               <Form.Group
                 className="inputForm"
                 as={Col}
@@ -227,10 +256,11 @@ const CartContainer = () => {
                   value={telefono}
                   onChange={(ev) => setTelefono(ev.target.value)}
                 />
-                <Form.Control.Feedback>Correcto!</Form.Control.Feedback>
-                <Form.Control.Feedback type="invalid">
-                  Ingresar un correo.
-                </Form.Control.Feedback>
+                {telefono.length < 10 ? (
+                  <p className="validCorreo">
+                    El teléfono debe contar con 10 dígitos.
+                  </p>
+                ) : null}
               </Form.Group>
               <Form.Group
                 className="inputForm"
@@ -249,17 +279,33 @@ const CartContainer = () => {
                     value={correo}
                     onChange={(ev) => setCorreo(ev.target.value)}
                   />
-                  <Form.Control.Feedback>Correcto!</Form.Control.Feedback>
-                  <Form.Control.Feedback type="invalid">
-                    Ingresar un correo.
-                  </Form.Control.Feedback>
                 </InputGroup>
+                {correo === "" ? (
+                  <p className="validCorreo">El correo es necesario.</p>
+                ) : null}
+                <br></br>
+
+                <Form.Label>Repetir E-mail</Form.Label>
+                <InputGroup hasValidation>
+                  <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
+                  <Form.Control
+                    type="text"
+                    placeholder="correo"
+                    aria-describedby="inputGroupPrepend"
+                    required
+                    value={validCorreo}
+                    onChange={(ev) => setValidCorreo(ev.target.value)}
+                  />
+                </InputGroup>
+                {correo !== validCorreo ? (
+                  <p className="validCorreo">
+                    El correo no coincide con el anterior.
+                  </p>
+                ) : null}
               </Form.Group>
             </Row>
 
-            <Button type="submit" onClick={confirmPurchase}>
-              Enviar orden
-            </Button>
+            <Button type="submit">Enviar orden</Button>
           </Form>
         </Modal.Body>
       </Modal>

@@ -14,31 +14,35 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/home",
-                element: <h1>home</h1>,
+                element: <h1>home</h1>
+            },
+            {
+                path: "/",
+                element: <ItemListContainer/>
             },
             {
                 path: "/cartelera",
-                element: <ItemListContainer/>,
+                element: <ItemListContainer/>
             },
             {
                 path: "/category/:categoryId",
-                element: <ItemListContainer/>,
+                element: <ItemListContainer/>
             },
             {
                 path: "/salones",
-                element: <h1>Salones</h1>,
+                element: <h1>Salones</h1>
             },
             {
                 path: "/contacto",
-                element: <h1>Contacto</h1>,
+                element: <h1>Contacto</h1>
             },
             {
                 path: "/detail/:detailId",
-                element: <ItemDetailContainer/>,
+                element: <ItemDetailContainer/>
             },
             {
                 path: "/cart",
-                element: <CartContainer />,
+                element: <CartContainer />
             },
 
         ],

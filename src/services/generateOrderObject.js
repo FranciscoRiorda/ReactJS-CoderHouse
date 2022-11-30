@@ -1,9 +1,10 @@
-const generateOrderObject = (nombre, apellido, telefono, correo, cart, total) => {
+const generateOrderObject = (nombre, apellido, telefono, correo, dni, cart, total) => {
     return {
         buyer: {
             nombre: nombre,
             apellido: apellido,
             telefono: telefono,
+            dni: dni,
             correo: correo
         },
         items: cart,
