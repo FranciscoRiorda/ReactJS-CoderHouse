@@ -40,7 +40,11 @@ const ItemDetailContainer = () => {
   return (
     <div className="cardDetail">
       {data ? (
-        <ItemDetail data={data} detalle={"Compra de entradas"} />
+        <ItemDetail data={data} detalle={<img
+          className="detalle"
+          src={"../assets/img/compraEntradas.png"}
+          alt="header img"
+        />} />
       ) : (
         <Spinner className="spinner" animation="border" variant="danger" />
       )}

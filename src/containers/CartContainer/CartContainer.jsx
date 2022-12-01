@@ -6,7 +6,7 @@ import { Shop } from "../../contexts/Shop";
 import "../CartContainer/stylesCartContainer.css";
 import CartCheckout from "../../components/CartCheckout/CartCheckout";
 import { useState } from "react";
-import { Button, Col, Form, InputGroup, Modal, Row, Spinner } from "react-bootstrap";
+import { Button, Col, Form, InputGroup, Modal, Row } from "react-bootstrap";
 import generateOrderObject from "../../services/generateOrderObject";
 import { doc, getDoc, updateDoc, collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/config";
@@ -235,7 +235,7 @@ const CartContainer = () => {
                 <Form.Label>DNI</Form.Label>
                 <Form.Control
                   required
-                  type="text"
+                  type="number"
                   placeholder="DNI"
                   value={dni}
                   onChange={(ev) => setDni(ev.target.value)}

@@ -1,10 +1,10 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.title {
+.titleHeader {
     width: 100%;
     height: 10vh;
     display: flex;
@@ -12,7 +12,11 @@
     align-items: center;
     font-size: x-large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+    background-image: linear-gradient(rgba(0, 0, 0, 0.122), rgba(0, 0, 0, 0.826));
+    color: white;
+    position: relative;
+    top: -100px;
+    padding: 50px;
 }
 
 .cardsFlex {
@@ -21,12 +25,35 @@
     justify-content: center;
 }
 
-.buttonGroup{
+.cardEventosScroll {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 10px;
+    overflow-x: scroll;
+    width: 100%;
+    }
+
+.buttonGroup {
     display: flex;
     justify-content: right;
-    margin: 0% 9% 1% 0%;
+    margin: -3% 9% 0% 0%;
 }
 
-.boton{
+.boton {
     margin: 1px;
+}
+
+.headerImgDiv{
+    width: 100%;
+    height: 350px;
+    position: absolute;
+}
+
+.headerImg{
+    width: 100%;
+    height: 350px;
+    
 }
