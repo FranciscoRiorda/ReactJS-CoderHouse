@@ -1,19 +1,19 @@
 .contenedorFooter{
     width: 100%;
-    height: 200px;
 }
 
 .contenedorDiv{
     display: flex;
     justify-content: space-around;
-    margin-top: 2%;
+    margin: 50px 0px 50px 0px;
 }
 
 .contenedorRedes{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    margin: 80px;
+    padding: 80px;
+    background-color: rgb(203, 203, 203);
 }
 
 .bTitle {
@@ -22,5 +22,18 @@
 }
 
 .pFooter{
-    margin: 1;
+    margin: 5px 5px;
+    width: 30px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.pFooter:hover{
+    width: 35px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
 }

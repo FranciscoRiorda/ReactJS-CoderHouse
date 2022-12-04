@@ -9,7 +9,7 @@ import "./stylesItemDetail.css";
 
 /**
  * Detalle de un producto seleccionado
- * @property {Object} data Muestra el detalle del producto seleccionado para realizar la compra 
+ * @property {Object} data Muestra el detalle del producto seleccionado para realizar la compra
  * @returns JSX con el renderizado del producto
  */
 
@@ -67,7 +67,11 @@ const ItemDetail = ({ data, detalle }) => {
           <div className="itemCount">
             {cantidadEntradas ? (
               <div className="goToCart">
-                <Button className="botonCart" onClick={onNavigate} variant="outline-dark">
+                <Button
+                  className="botonCart"
+                  onClick={onNavigate}
+                  variant="outline-dark"
+                >
                   {" "}
                   Ir al carrito
                 </Button>{" "}
@@ -78,6 +82,7 @@ const ItemDetail = ({ data, detalle }) => {
             )}
           </div>
         </div>
+        <div className="dataEvento dataEvento2"></div>
       </div>
     </>
   );

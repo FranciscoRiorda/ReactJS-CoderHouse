@@ -1,9 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 .titleHeader {
     width: 100%;
     height: 10vh;
@@ -48,8 +42,7 @@
 
 .headerImgDiv{
     width: 100%;
-    height: 350px;
-    position: absolute;
+    position: relative;
 }
 
 .headerImg{

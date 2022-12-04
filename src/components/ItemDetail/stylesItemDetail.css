@@ -4,18 +4,13 @@
     width: 100%;
 }
 
-.itemDetail{
-    display: inline-block;
-    flex-wrap: nowrap;
-    width: 100%;
-}
-
 .detalle {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    opacity: 0.8;
 }
 
 .divCardBody{
@@ -32,6 +27,10 @@
     margin-top: -10px;
 }
 
+.dataEvento2{
+    margin-top: 0px;
+}
+
 .fecha{
     font-size: medium;
 }
@@ -43,8 +42,6 @@
 
 .contenedorPrincipalID{
     width: 100%;
-    border: 1px solid gray;
-    
 }
 
 .descriptionID{

@@ -13,7 +13,7 @@ import { Shop } from "../../contexts/Shop";
  */
 
 const CartItem = ({ item }) => {
-  const [cantidadEntradas, setCantidadEntradas] = useState(
+  const [cantidadEntradas] = useState(
     item.cantidadEntradas
   );
 
@@ -21,26 +21,6 @@ const CartItem = ({ item }) => {
 
   const onRemove = () => {
     removeProduct(item.id);
-  };
-
-  const onChangeAgregarCantidad = () => {
-    if (item.cantidadEntradas < item.stock) {
-      item.cantidadEntradas = cantidadEntradas + 1;
-      setCantidadEntradas(cantidadEntradas + 1);
-    } else {
-      setCantidadEntradas(cantidadEntradas);
-      alert("Ha llegado a la compra máxima disponible");
-    }
-  };
-
-  const onChangeDisminuirCantidad = () => {
-    if (cantidadEntradas > 1) {
-      item.cantidadEntradas = cantidadEntradas - 1;
-      setCantidadEntradas(cantidadEntradas - 1);
-    } else {
-      setCantidadEntradas(cantidadEntradas);
-      alert("No puede comprar menos de 1 entrada");
-    }
   };
 
   useEffect(() => {}, [cantidadEntradas]);
@@ -60,15 +40,6 @@ const CartItem = ({ item }) => {
               <p>
                 Total: <strong>${item.precio * item.cantidadEntradas}</strong>
               </p>
-              <div className="count">
-                <button className="botonIC" onClick={onChangeDisminuirCantidad}>
-                  -
-                </button>
-                <span className="span">{item.cantidadEntradas}</span>
-                <button className="botonIC" onClick={onChangeAgregarCantidad}>
-                  +
-                </button>
-              </div>
             </div>
           </div>
           <div className="remove" onClick={onRemove}>

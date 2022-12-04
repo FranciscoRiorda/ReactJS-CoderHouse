@@ -22,7 +22,6 @@ const ItemListConainer = () => {
         <div className="titleHeader">
           <b>Centro Cultural Córdoba</b>
         </div>
-        
         <div className="buttonGroup">
           <ButtonGroup aria-label="Basic example">
             <Link to="/cartelera">
@@ -53,7 +52,6 @@ const ItemListConainer = () => {
             <Spinner animation="border" variant="danger" />
           </div>
         ) : null}{" "}
-        :{" "}
         {data.length && !loading && !error ? (
           <div className="cardEventosScroll">
             <ItemList events={data} />
