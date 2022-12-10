@@ -17,3 +17,6 @@ Para el desarrollo de esta web se ha utilizado create-react-app, y también se h
 1. **bootstrap:** Para el desarrollo de las cards y modal de datos de comprados. Se ha utilizado para optimizar tiempos para respetar los plazos de entrega.
 2. **sweetalert2:** Se ha utilizado para la implementación de mensajes de confirmacion y errores mas estilizados. 
 3. **FontAwesome:** Se ha utilizado para implementar el icon de cart en el navbar.
+
+
+https://react-js-coder-house.vercel.app/
