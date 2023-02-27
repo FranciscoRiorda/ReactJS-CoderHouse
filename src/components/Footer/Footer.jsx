@@ -43,19 +43,19 @@ const Footer = () => {
         <div className="contenedorDiv">
           <div className="links">
             <b className="bTitle">Links útiles</b>
-            <Link to="/home" className="pFooter">
+            {/* <Link to="/home" className="pFooter">
               Inicio
-            </Link>
+            </Link> */}
             <Link to="/cartelera" className="pFooter">
               Cartelera
             </Link>
-            <Link to="/salones" className="pFooter">
+            {/* <Link to="/salones" className="pFooter">
               Salones
-            </Link>
+            </Link> */}
           </div>
-          <div>
+          {/* <div>
             <p className="bTitle">Contacto</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

@@ -26,11 +26,11 @@ const NavBar = () => {
             <Logo />
           </Link>
         </div>
-        <li className={themeColor === 'light' ? 'li' : 'liDark'}>
+        {/* <li className={themeColor === 'light' ? 'li' : 'liDark'}>
           <Link to="/home" className="link">
             <b className={themeColor === "light" ? "b" : "bDark"}>Inicio</b>
           </Link>
-        </li>
+        </li> */}
 
         <li className={themeColor === 'light' ? 'li' : 'liDark'}>
           <Link to="/cartelera" className="link">
@@ -38,17 +38,17 @@ const NavBar = () => {
           </Link>
         </li>
 
-        <li className={themeColor === 'light' ? 'li' : 'liDark'}>
+        {/* <li className={themeColor === 'light' ? 'li' : 'liDark'}>
           <Link to="/salones" className="link">
             <b className={themeColor === "light" ? "b" : "bDark"}>Salones</b>
           </Link>
-        </li>
+        </li> */}
 
-        <li className={themeColor === 'light' ? 'li' : 'liDark'}>
+        {/* <li className={themeColor === 'light' ? 'li' : 'liDark'}>
           <Link to="/contacto" className="link">
             <b className={themeColor === "light" ? "b" : "bDark"}>Contactos</b>
           </Link>
-        </li>
+        </li> */}
 
         <div className="themeCart">
           <select className="select" value={themeColor} onChange={handleChange}>
